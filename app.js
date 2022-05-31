@@ -249,10 +249,10 @@ rotateButton.addEventListener("click", shipsController.rotate);
 const Player = () => {
   const playGame = () => {
     if (isGameOver) return;
-    // if (!allShipsPlaced) {
-    //   alert("Place all ypur ships");
-    //   return;
-    // }
+    if (!allShipsPlaced) {
+      alert("Place all ypur ships");
+      return;
+    }
     if (currentPlayer === "user") {
       turnDisplay.innerHTML = "Your Turn";
       computerSquares.forEach((square) =>
