@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="shortcut icon"
+      href="./assets/battleship.png"
+      type="image/x-icon"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Gruppo&display=swap"
       rel="stylesheet"
     />
@@ -15,6 +20,11 @@
     <title>BattleShip</title>
   </head>
   <body>
+    <div class="start-display">
+      <h1>BattleShip</h1>
+      <button class="enter">Enter</button>
+    </div>
+
     <h1 class="title">BattleShip</h1>
     <div class="container">
       <div class="battleship-grid grid-user"></div>
@@ -26,7 +36,7 @@
         <button class="btn" id="start">Start Game</button>
         <button id="rotate" class="btn">Rotate Your Ships</button>
       </div>
-      <h3 id="info-turn" class="info-text">Your Turn</h3>
+      <h3 id="info-turn" class="info-text"></h3>
       <h3 id="info" class="info-text"></h3>
     </div>
 

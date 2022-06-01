@@ -11,16 +11,14 @@ const startButton = document.querySelector("#start");
 const rotateButton = document.querySelector("#rotate");
 const turnDisplay = document.querySelector("#info-turn");
 const infoDisplay = document.querySelector("#info");
-// const setupButtons = document.querySelector('.setup-buttons')
+const enterButton = document.querySelector(".enter");
+const enterDisplay = document.querySelector(".start-display");
 const userSquares = [];
 const computerSquares = [];
 let isHorizontal = true;
 let isGameOver = false;
 let currentPlayer = "user";
 const width = 10;
-let playerNum = 0;
-let ready = false;
-let enemyReady = false;
 let allShipsPlaced = false;
 let shotFired = -1;
 
@@ -250,7 +248,7 @@ const Player = () => {
   const playGame = () => {
     if (isGameOver) return;
     if (!allShipsPlaced) {
-      alert("Place all ypur ships");
+      alert("Place all your ships");
       return;
     }
     if (currentPlayer === "user") {
@@ -400,11 +398,20 @@ const Player = () => {
     computerSquares.forEach((square) =>
       square.removeEventListener("click", () => {})
     );
+    enterDisplay.style.height = "100vh";
+    enterDisplay.style.zIndex = "100";
+    enterDisplay.style.opacity = "1";
   };
 
   return { playGame };
 };
 
 const player = Player();
+
+enterButton.addEventListener("click", () => {
+  enterDisplay.style.height = "0";
+  enterDisplay.style.zIndex = "-1";
+  enterDisplay.style.opacity = "0";
+});
 
 startButton.addEventListener("click", player.playGame);
