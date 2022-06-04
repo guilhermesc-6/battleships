@@ -42,8 +42,5 @@ export const GameBoard = () => {
     else generate(ship, computerSquares);
   };
 
-  document.querySelector(".grid-display").innerHTML =
-    '<div class="ship destroyer-container" draggable="true">\n          <div id="destroyer-0"></div>\n          <div id="destroyer-1"></div>\n        </div>\n        <div class="ship submarine-container" draggable="true">\n          <div id="submarine-0"></div>\n          <div id="submarine-1"></div>\n          <div id="submarine-2"></div>\n        </div>\n        <div class="ship cruiser-container" draggable="true">\n          <div id="cruiser-0"></div>\n          <div id="cruiser-1"></div>\n          <div id="cruiser-2"></div>\n        </div>\n        <div class="ship battleship-container" draggable="true">\n          <div id="battleship-0"></div>\n          <div id="battleship-1"></div>\n          <div id="battleship-2"></div>\n          <div id="battleship-3"></div>\n        </div>\n        <div class="ship carrier-container" draggable="true">\n          <div id="carrier-0"></div>\n          <div id="carrier-1"></div>\n          <div id="carrier-2"></div>\n          <div id="carrier-3"></div>\n          <div id="carrier-4"></div>\n        </div>\n';
-
   return { createBoard, generate };
 };
